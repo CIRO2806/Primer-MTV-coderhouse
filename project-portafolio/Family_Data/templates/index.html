@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <title>Familia Cabral Maximiliano</title>
+    <style>
+      * {
+        font-family: 'Impact', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container p-2 p-lg-5">
+      <div class="row justify-content-right">
+        <div class="col-12 mb-4">
+          <h3 class="text-right">
+            Mis Familiares
+          </h3>
+        </div>
+        <div class="col-12 col-lg-7">
+          <div class="table-responsive">
+            <table class="table table text-right">
+              <thead>
+                <tr>
+                  <th scope="col">Nombres</th>
+                  <th scope="col">Apellidos</th>
+                  <th scope="col">Años</th>
+                  <th scope="col">Fecha de Nacimiento</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for item in data %}
+                <tr>
+                  <td>
+                    {{ item.nombre }}
+                  </td>
+                  <td>
+                    {{ item.apellido }}
+                  </td>
+                  <th>
+                    {{ item.edad }}
+                  </th>
+                  <td>
+                    {{ item.BirthDay }}
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
